@@ -1,0 +1,13 @@
+# Compiled binaries and machine output
+*.exe
+*.out
+*.o
+*.obj
+a.out
+
+# VS Code configuration
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
