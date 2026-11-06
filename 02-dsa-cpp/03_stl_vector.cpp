@@ -38,8 +38,29 @@ int main(){
 
     vector<int>::iterator pos = v4.begin();
 
-    pos++;
+    // v.end will be pointing right after the last element
+    // v.rend will be pointing right before the first element
+    // v.rbegin will point the last element
+
+    pos+=3;
     cout<<*(pos)<<" ";
 
+    cout << v4.back() << "\n";
+
+    vector<int> numbers = {1,2,3,4,5,6,7,8};
+
+    for (vector<int>::reverse_iterator digits = numbers.rbegin(); digits != numbers.rend(); digits++){
+        cout<< *digits << " ";
+    }
+
+    numbers.erase(numbers.begin() + 2, numbers.begin() + 5);
+    
+    for (auto digits = numbers.begin(); digits != numbers.end(); digits++){
+        cout<< *digits << " ";
+    }
+
+    for (auto digits : numbers){
+        cout<< digits << " ";
+    }
     return 0;
 }
